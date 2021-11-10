@@ -1,0 +1,300 @@
+
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurukul</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- end of fonts -->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="Static/css/style.css">
+
+<!--Bootstrap CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <style>
+        /* navbar */
+        body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0099ff;
+
+  top: 0;
+  width: 100%;
+
+}
+li
+{
+    float:left;
+ }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  position:relative;
+  left:100px;
+  margin-top:25px;
+  font-size:20px;
+
+}
+
+li a:hover:not(.active) {
+  color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+li h1
+  {
+ display: block;
+  color: white;
+  text-align: center;
+  margin-top:15px;
+  margin-bottom:5px;
+  text-decoration: none;
+  font-size:50px;
+  font-family: 'Festive', cursive;
+  position:relative;
+  left:50px;
+ }
+
+
+li input[type=text] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  position:relative;
+  left:110px;
+  margin-top:30px;
+}
+
+li button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  position:relative;
+  left:110px;
+  margin-top:30px;
+}
+
+li  button:hover {
+  background: #ccc;
+}
+
+        /* end of navbar */
+
+        /* footer */
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #000f1a;
+  color: white;
+  margin-bottom:0;
+  margin-top:200px;
+  width:100%;
+  margin-left:0px;
+  position:absolute;
+  left:0px;
+}
+/* footer end */
+
+/* body */
+#dashboard
+{
+ border:1px solid black;
+ margin-top:50px;
+ color:white;
+ padding:25px;
+ position:relative;
+ left:25px;
+ background-color:#000f1a;
+ width:20%;
+ text-align:center;
+ }
+
+ #dashboard:hover
+ {
+    background:green;
+ }
+  a
+ {
+  text-decoration:none;
+
+
+ }
+/* end body */
+#course1-tile,#course2-tile,#course3-tile
+{
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  border:1px solid black;
+  background-position: center;
+  border-radius: 5px;
+}
+
+#course1-tile:hover,#course2-tile:hover,#course3-tile:hover
+{
+  box-shadow: 0 1px 5px 1px #000;
+}
+
+#course1-tile span,#course2-tile span,#course3-tile span
+{
+   color: black;
+   font-weight: bold;
+   font-size: 25px;
+   text-align: center;
+  font-family: 'Dancing Script', cursive;
+font-family: 'Domine', serif;
+   width: 100%;
+   position: relative;
+   left: 25px;
+   top: 15px;
+}
+
+    </style>
+</head>
+<body>
+<ul id="curve">
+    <li >
+        <h1>Gurukul</h1>
+    </li>
+  <li ><a href="{url 'home'}">Home</a></li>
+  <li ><a href="{url 'courses'}">Courses</a></li>
+    <li ><a href="#events">Events</a></li>
+    <li ><a href="#materials">Study Materials</a></li>
+    <li ><a href="contribute.html">Contribute</a></li>
+  <li ><a href="#contact">Contact</a></li>
+  <li ><a href="#about">About</a></li>
+  <span class="hello-msg">Hello, {{request.user}}</span>
+  <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
+    <li>
+  <input type="text" placeholder="Search..">
+        <button type="submit"><i class="fa fa-search"></i></button>
+</li>
+</ul>
+
+   <a  href="dashboard.html"> <div id="dashboard" >Go to dashboard</div></a>
+
+<!--Demo videos section-->
+<div class="w3-content w3-container w3-padding-64" >
+<h3 class="w3-center">DEMO VIDEOS</h3>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large" id="videos">
+      <p class="w3-wide">Video 1</p>
+      <video width="400" controls>
+        <source src="videos/video2.mp4" onclick="onClick(this)" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+    </div>
+   <div class="w3-col m6 w3-center w3-padding-large" id="videos">
+      <p class="w3-wide">Video 2</p>
+      <video width="400"  controls>
+        <source src="videos/video3.mp4" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+    </div>
+    <div class="w3-col m6 w3-center w3-padding-large" id="videos">
+      <p class="w3-wide">Video 3</p>
+      <video width="400"  controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        <source src="mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Courses Section -->
+<div class="w3-content w3-container w3-padding-64" id="courses">
+  <h3 class="w3-center">COURSES OFFERED</h3>
+  <p class="w3-center"><em>Here are some of the courses offered by Gurukul.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+ <div id="home-tiles" class="row">
+  <div class="col-lg-4 col-xs-4">
+      <div id="course1-tile"  >
+        <img src="images/course1.jpg" onclick="onClick(this)">
+        <span>
+        Computer Basics.
+      </span>
+      <div ><label style="margin-bottom: 0px;line-height: 20px;position: relative;top: 150px;left: 15px;font-size: 14px;font-weight: bold;">COURSE</label></div>
+      </div>
+  </div><br>
+  <div class="col-lg-4 col-xs-4">
+      <div id="course2-tile">
+        <img src="images/course3.jpg" onclick="onClick(this)">
+        <span>
+        C Programming
+      </span>
+      <div ><label style="margin-bottom: 0px;line-height: 20px;position: relative;top: 150px;left: 15px;font-size: 14px;font-weight: bold;">COURSE</label></div>
+      </div>
+  </div>
+  <div class="col-lg-4 col-xs-4">
+      <div id="course3-tile" >
+        <img src="images/course5.jpg" onclick="onClick(this)">
+        <span>
+       Data Structures in C
+      </span>
+      <div ><label style="margin-bottom: 0px;line-height: 20px;position: relative;top: 150px;left: 15px;font-size: 14px;font-weight: bold;">COURSE</label></div>
+      </div>
+  </div>
+</div>
+</div>
+
+
+
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "65a302b2-621c-4ba0-a3c6-3cf7b94c085c", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "e8739efb-7573-4f45-9fca-93aad3d2cfbd", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+
+</script>
+
+</body>
+
+<footer>
+  <p>Gurukul<br>
+  <a href="mailto:hege@example.com">hege@example.com</a></p>
+
+</footer>
+</html>

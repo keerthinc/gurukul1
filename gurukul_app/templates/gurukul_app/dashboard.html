@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurukul</title>
+     <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- end of fonts -->
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--Bootstrap-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="Static/css/style.css">
+
+<!--Bootstrap CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+        <style>
+        /* navbar */
+        body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0099ff;
+
+  top: 0;
+  width: 100%;
+
+}
+li
+{
+    float:left;
+ }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  position:relative;
+  left:100px;
+  margin-top:25px;
+  font-size:20px;
+
+}
+
+li a:hover:not(.active) {
+  color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+li h1
+  {
+ display: block;
+  color: white;
+  text-align: center;
+  margin-top:15px;
+  margin-bottom:5px;
+  text-decoration: none;
+  font-size:50px;
+  font-family: 'Festive', cursive;
+  position:relative;
+  left:50px;
+ }
+
+
+li input[type=text] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  position:relative;
+  left:110px;
+  margin-top:30px;
+}
+
+li button {
+  float: right;
+  padding: 6px 10px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  position:relative;
+  left:110px;
+  margin-top:30px;
+}
+
+li  button:hover {
+  background: #ccc;
+}
+
+        /* end of navbar */
+
+        /* footer */
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #000f1a;
+  color: white;
+  margin-bottom:0;
+  margin-top:200px;
+  width:100%;
+  margin-left:0px;
+  position:absolute;
+  left:0px;
+}
+/* footer end */
+
+#courses-tile
+{
+  height: 150px;
+  width: 80%;
+  overflow: hidden;
+  border:1px solid black;
+  background-position: center;
+  border-radius: 5px;
+  margin-left:0px;
+  background:linear-gradient(to bottom, #000066 0%, #0099cc 100%);
+
+}
+#tests-tile
+{
+height: 150px;
+  width: 80%;
+  overflow: hidden;
+  border:1px solid black;
+  background-position: center;
+  border-radius: 5px;
+  margin-left:0px;
+   background:linear-gradient(to bottom, #000066 0%, #0099cc 100%);
+}
+
+#projects-tile
+{
+height: 150px;
+  width: 80%;
+  overflow: hidden;
+  border:1px solid black;
+  background-position: center;
+  border-radius: 5px;
+  margin-left:0px;
+ background:linear-gradient(to bottom, #000066 0%, #0099cc 100%);
+}
+
+#courses-tile:hover,#tests-tile:hover,#projects-tile:hover
+{
+  box-shadow: 0 1px 5px 1px #000;
+}
+
+#courses-tile span,#tests-tile span,#projects-tile span
+{
+   color: black;
+   font-weight: bold;
+   font-size: 25px;
+   text-align: center;
+  font-family: 'Dancing Script', cursive;
+font-family: 'Domine', serif;
+   width: 100%;
+   position: relative;
+   left: 25px;
+   top: 5px;
+}
+h2
+{
+    text-align:center;
+    font-size:25px;
+    margin-top:15px;
+}
+    </style>
+</head>
+<body>
+<ul id="curve">
+    <li >
+        <h1>Gurukul</h1>
+    </li>
+  <li ><a href="afterLogin.html">Home</a></li>
+  <li ><a href="courses.html">Courses</a></li>
+    <li ><a href="#events">Events</a></li>
+    <li ><a href="#materials">Study Materials</a></li>
+    <li ><a href="contribute.html">Contribute</a></li>
+  <li ><a href="#contact">Contact</a></li>
+  <li ><a href="#about">About</a></li>
+    <li>
+  <input type="text" placeholder="Search..">
+        <button type="submit"><i class="fa fa-search"></i></button>
+</li>
+</ul>
+
+<h2>YOUR DASHBOARD</h2>
+<!-- Courses Section -->
+<div class="w3-content w3-container w3-padding-64" id="courses">
+
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+        <div id="home-tiles" class="row">
+            <div class="col-lg-4 col-xs-4">
+                <a href="mycourses.html" style="text-decoration:none;color:white;">
+                <div id="courses-tile"  >
+                    COURSES
+                </div>
+                </a>
+            </div>
+             <div class="col-lg-4 col-xs-4" >
+                 <a href="tests.html" style="text-decoration:none;color:white;">
+                <div id="tests-tile"  >
+                    TESTS
+                </div>
+                 </a>
+            </div>
+             <div class="col-lg-4 col-xs-4">
+                 <a href="projects.html" style="text-decoration:none;color:white;">
+                <div id="projects-tile"  >
+                    PROJECTS
+                </div>
+                 </a>
+            </div>
+        </div>
+</div>
+    <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "65a302b2-621c-4ba0-a3c6-3cf7b94c085c", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "e8739efb-7573-4f45-9fca-93aad3d2cfbd", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+
+</script>
+</body>
+</html>

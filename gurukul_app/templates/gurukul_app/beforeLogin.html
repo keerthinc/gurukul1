@@ -1,0 +1,158 @@
+{%  load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurukul</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- bootstrap end -->
+
+    <!-- font styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Festive&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Festive&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <!-- end of font styles -->
+    <style>
+        body
+        {
+            background:url(static/images/background.jpg) repeat scrollno-repeat;
+            width:100%;
+        }
+        /* navbar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+  li h1
+  {
+ display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:50px;
+  font-family: 'Festive', cursive;
+  position:relative;
+  left:50px;
+ }
+ li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size:25px;
+  font-family: 'Festive', cursive;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+li a:hover:not(.active) {
+  color: #fff;
+  text-decoration:none;
+  font-family: 'Festive', cursive;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+
+
+/* navbar end */
+
+#quote
+{
+  position:absolute;
+  top:130px;
+  left:950px;
+  font-size:65px;
+  color:white;
+  font-family: 'Dancing Script', cursive;
+  font-weight:bold;
+    text-align:center;
+    padding:0;
+    text-shadow:2px 2px #4d4d4d;
+}
+
+
+ /* footer */
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+  margin-bottom:0;
+  margin-top:650px;
+}
+/* footer end */
+</style>
+</head>
+<body>
+<ul id="nav-list1">
+    <li style="float:right;">
+        <a href="{% url 'register' %}">Signup</a>
+    </li>
+
+    <li style="float:right;">
+        <a href="{% url 'login'%}">Login</a>
+    </li>
+    <li style="float:left;">
+        <h1>Gurukul</h1>
+    </li>
+    <li style="float:right;">
+        <a href="#">Demo</a>
+    </li>
+    <li style="float:right;">
+        <a href="#">Home</a>
+    </li>
+</ul>
+<div id="quote" >
+
+        An investment in knowledge pays the best interest
+
+</div>
+<footer>
+  <p>Gurukul<br>
+  <a href="mailto:hege@example.com">hege@example.com</a></p>
+
+</footer>
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "65a302b2-621c-4ba0-a3c6-3cf7b94c085c", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "e8739efb-7573-4f45-9fca-93aad3d2cfbd", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+
+</script>
+
+
+
+</body>
+</html>
