@@ -26,9 +26,8 @@
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-
     <style>
-                /* navbar */
+        /* navbar */
         body {margin:0;}
 
 ul {
@@ -123,6 +122,32 @@ footer {
   left:0px;
 }
 /* footer end */
+
+/* body */
+#dashboard
+{
+ border:1px solid black;
+ margin-top:50px;
+ color:white;
+ padding:25px;
+ position:relative;
+ left:25px;
+ background-color:#000f1a;
+ width:20%;
+ text-align:center;
+ }
+
+ #dashboard:hover
+ {
+    background:green;
+ }
+  a
+ {
+  text-decoration:none;
+
+
+ }
+/* end body */
 #course1-tile,#course2-tile,#course3-tile
 {
   height: 400px;
@@ -153,18 +178,16 @@ font-family: 'Domine', serif;
 }
 
     </style>
-
 </head>
 <body>
 <ul id="curve">
     <li >
         <h1>Gurukul</h1>
     </li>
-  <li ><a href="{% url 'home' % }">Home</a></li>
-  <li ><a href="{% url 'courses' %}">Courses</a></li>
-    <li ><a href="#events">Events</a></li>
-    <li ><a href="#materials">Study Materials</a></li>
-    <li ><a href="contribute.html">Contribute</a></li>
+  <li ><a href="/ihome/">Home</a></li>
+  <li ><a href="/createCourse/">Create Course</a></li>
+    <li ><a href="/addQuiz/">Create Quiz</a></li>
+    <li ><a href="/contribute/">Contribute</a></li>
   <li ><a href="#contact">Contact</a></li>
   <li ><a href="#about">About</a></li>
     <li>
@@ -173,35 +196,8 @@ font-family: 'Domine', serif;
 </li>
 </ul>
 
+ 
 
-<!-- Courses Section -->
-<div class="w3-content w3-container w3-padding-64" id="courses">
-  <h3 class="w3-center">Trending Courses</h3>
-  <br>
-{% for c in course %}
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
- <div id="home-tiles" class="row">
-     <a href="/{{c.id}}" style="text-decoration:none;">
-     <div class="col-lg-4 col-xs-4">
-        <div id="course1-tile"  >
-            <img src="{{c.image.url }}"  onclick="onClick(this)">
-            <span>
-                {{c.course_name}}
-            </span>
-            <div>
-                {{c.company}}
-            </div>
-            <div >
-                <label style="margin-bottom: 0px;line-height: 20px;position: relative;top: 150px;left: 15px;font-size: 14px;font-weight: bold;">
-                    {{c.type}}
-                </label>
-            </div>
-        </div>
-    </div>
-     </a>
- </div>
-    {% endfor %}
-</div>
 
 
 
@@ -220,6 +216,11 @@ font-family: 'Domine', serif;
 
 </script>
 
-
 </body>
+
+<footer>
+  <p>Gurukul<br>
+  <a href="mailto:hege@example.com">hege@example.com</a></p>
+
+</footer>
 </html>

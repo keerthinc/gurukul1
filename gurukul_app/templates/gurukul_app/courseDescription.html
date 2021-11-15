@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurukul</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1
+        {
+        text-align:center;
+        font-size:25px;
+
+        }
+      #row1{
+    position: absolute;
+    top: 70px;
+    width: 80%;
+    height: 78%;
+    left: 10%;
+    bottom: 35%;
+    border: 1px solid black;
+    box-shadow:2px 2px 2px 2px #000;
+    opacity: .8;
+}
+.row{
+    position: relative;
+    color:#000;
+}
+.row input{
+    position: relative;
+    left: 45px;
+
+
+    width:80%;
+    outline:none;
+    background: none;
+    border: 0px;
+    border-bottom:3px solid blue;
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 25px;
+}
+.row select
+{
+position: relative;
+    left: 45px;
+   }
+
+
+.row label
+{
+    position:relative;
+    left:25px;
+    }
+
+    </style>
+</head>
+<body>
+
+
+        <div class="card card-body" id="row1">
+
+               <div class="row">
+                 {% for c in coursedesc %}
+            <h1>
+                {{c.course_name}}
+            </h1><br>
+            <label>
+                {{c.company}}<br>
+            </label><br>
+
+                <label >
+                    {{c.type}}<br>
+                </label>
+<br>
+            <label>
+                {{c.duration}} weeks<br>
+            </label><br>
+            <label>
+                {{c.description}}<br>
+            </label><br>
+            <label>
+                {{c.ratings}} stars<br>
+            </label><br>
+            {% endfor %}
+            </div>
+
+
+
+</div>
+</body>
+</html>

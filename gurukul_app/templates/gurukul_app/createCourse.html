@@ -1,0 +1,109 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurukul</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1
+        {
+        text-align:center;
+        font-size:25px;
+        margin-top:25px;
+        }
+      #row1{
+    position: absolute;
+    top: 70px;
+    width: 40%;
+    height: 110%;
+    left: 32%;
+    bottom: 35%;
+    border: 3px solid black;
+    background-color: #000;
+    opacity: .8;
+}
+.row{
+    position: relative;
+    color:white;
+}
+.row input{
+    position: relative;
+    left: 50px;
+
+
+    width:80%;
+    outline:none;
+    background: none;
+    border: 0px;
+    border-bottom:3px solid blue;
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 25px;
+}
+.row select
+{
+position: relative;
+    left: 45px;
+   }
+.row textarea
+{
+position: relative;
+    left: 45px;
+}
+
+.row label
+{
+    position:relative;
+    left:20px;
+    }
+
+    </style>
+</head>
+<body>
+
+        <h1>Create Course</h1>
+        <div class="card card-body" id="row1">
+           <form action="" method="POST">
+              {% csrf_token %}
+               <div class="row">
+                {{form.as_p}}<br>
+               </div>
+                <br>
+               <div id="submit" style="float:right;">
+                <a href="/courses/">
+                <button class="btn btn-primary">Submit</button>
+            </a>
+                </div>
+
+           </form>
+<br><br><br><br><br><br>
+
+
+</div>
+</body>
+</html>

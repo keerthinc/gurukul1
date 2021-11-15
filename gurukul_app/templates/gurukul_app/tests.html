@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurukul</title>
+</head>
+<body>
+    <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="quiz" style="margin-top:75px;border: 1px solid #ebebe0;padding: 15px;">
+      {% for q in quizes %}
+      <a href="/{{q.id}}"> <button>{{q.quiz_name}}</button></a>
+
+      <br>
+      {% endfor %}
+  </div>
+</body>
+</html>

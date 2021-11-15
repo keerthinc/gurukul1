@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurukul</title>
+</head>
+<body>
+     <div class="container">
+
+
+        <div class="row">
+            {% for c in coursedesc %}
+            <span>
+                {{c.course_name}}
+            </span>
+            <div>
+                {{c.company}}
+            </div>
+            <div >
+                <label >
+                    {{c.type}}
+                </label>
+            </div>
+            <div >
+                {{c.duration}} weeks
+            </div>
+            <div>
+                {{c.description}}
+            </div>
+            <div>
+                {{c.ratings}} stars
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

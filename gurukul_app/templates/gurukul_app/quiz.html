@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gurukul</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div style="margin-left:50px;margin-right:50px;margin-top:50px;">
+<div align="right " id="displaytimer"><b>Timer: 0 seconds</b></div>
+
+<form method='post' action=''>
+    {% csrf_token %}
+    {% for q in questions %}
+    <div class="form-group">
+      <label for="question">  {{q.question}}</label>
+    </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{q.question}}"  value="1" >
+            <label class="form-check-label" for="gridRadios1">
+                {{q.opt1}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{q.question}}"  value="2">
+            <label class="form-check-label" for="gridRadios2">
+                {{q.opt2}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{q.question}}"  value="3">
+            <label class="form-check-label" for="gridRadios1">
+                {{q.opt3}}
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="{{q.question}}"  value="4">
+            <label class="form-check-label" for="gridRadios2">
+                {{q.opt4}}
+            </label>
+        </div>
+        <br>
+
+    {% endfor %}
+ <input id='timer' type='hidden' name="timer" value="">
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+    {% block script %}
+        <script>
+
+            console.log('hello world')
+            const timer=document.getElementById('displaytimer')
+            console.log(timer.textContent)
+            const inputtag = document.getElementById('timer')
+
+            t=0
+            setInterval(()=>{
+                t+=1
+                timer.innerHTML ="<b>Timer: " +t+" seconds</b>"
+                inputtag.value = t
+            },1000)
+        </script>
+    {% endblock script %}
+
+</div>
+
+
+</body>
+</html>

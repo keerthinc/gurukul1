@@ -111,12 +111,19 @@ footer {
 <body>
 <ul id="nav-list1">
     <li style="float:right;">
-        <a href="{% url 'register' %}">Signup</a>
+        <a href="{% url 'sregisterPage' %}">Learner Signup</a>
     </li>
 
     <li style="float:right;">
-        <a href="{% url 'login'%}">Login</a>
+        <a href="{% url 'sloginPage'%}">Learner Login</a>
     </li>
+    <li style="float:right;">
+      <a href="{% url 'registerPage' %}">Instructor Signup</a>
+  </li>
+
+  <li style="float:right;">
+      <a href="{% url 'login'%}">Instructor Login</a>
+  </li>
     <li style="float:left;">
         <h1>Gurukul</h1>
     </li>
