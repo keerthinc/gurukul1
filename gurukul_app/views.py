@@ -87,13 +87,14 @@ def loginPage(request):
         context = {}
         return render(request, 'gurukul_app/loginPage.html', context)
 
+# @login_required(login_url='sloginPage')
 def logoutPage(request):
     logout(request)
     return redirect('loginPage')
 
 
 
-# @login_required(login_url='login')
+# @login_required(login_url='sloginPage')
 def home(request):
     course = Course.objects.all
     context = {
@@ -132,7 +133,7 @@ def courseDescription(request, id):
     }
     return render(request,"gurukul_app/courseDescription.html",context)
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def about(request):
     return render(request, 'gurukul_app/about.html')
 
@@ -143,7 +144,7 @@ def ihome(request):
     context = {
         'course': course,
     }
-    return render(request,"ihome.html",context)
+    return render(request,"gurukul_app/ihome.html",context)
 
 def myCourse(request):
     quizes = Quiz.objects.all
@@ -153,7 +154,7 @@ def myCourse(request):
     return render(request,"myCourse.html",context)
 
 def contribute(request):
-    return render(request,"contribute.html")
+    return render(request,"gurukul_app/contribute.html")
 
 def quiz(request,id):
     if request.method == 'POST':
@@ -191,7 +192,7 @@ def quiz(request,id):
             'questions': questions,
             'id':id
         }
-        return render(request, 'quiz.html', context)
+        return render(request, 'gurukul_app/quiz.html', context)
 
 
 def addQuestion(request):
@@ -203,7 +204,7 @@ def addQuestion(request):
             form.save()
             return redirect('addQuestion')
     context={'form':form}
-    return render(request,'addQuestion.html',context)
+    return render(request,'gurukul_app/addQuestion.html',context)
     #else:
         #return render(request,"home.html")
 
@@ -217,7 +218,7 @@ def addQuiz(request):
             form.save()
             return redirect('addQuestion')
     context = {'form': form}
-    return render(request, 'addQuiz.html', context)
+    return render(request, 'gurukul_app/addQuiz.html', context)
     #else:
         #return render(request, "home.html")
 
@@ -230,7 +231,7 @@ def createCourse(request):
              form.save()
              return redirect('courses')
     context = {'form': form}
-    return render(request, 'createCourse.html', context)
+    return render(request, 'gurukul_app/createCourse.html', context)
     # else:
     #     return render(request, "home.html")
 
@@ -239,28 +240,28 @@ def courses(request):
     context={
         'course':course,
     }
-    return render(request,"courses.html",context)
+    return render(request,"gurukul_app/courses.html",context)
 
 def courseDescription(request):
     coursedesc = Course.objects.all
     context = {
         'coursedesc':coursedesc
     }
-    return render(request,"courseDescription.html",context)
+    return render(request,"gurukul_app/courseDescription.html",context)
 
 
 def index(request):
-    return render(request,"index.html")
+    return render(request,"gurukul_app/index.html")
 
 def dashboard(request):
-    return render(request,"dashboard.html")
+    return render(request,"gurukul_app/dashboard.html")
 
 def myCourses(request):
-    return render(request,"myCourses.html")
+    return render(request,"gurukul_app/myCourses.html")
 
 def tests(request):
     quizes = Quiz.objects.all
     context = {
         'quizes': quizes
     }
-    return render(request, "tests.html", context)
+    return render(request, "gurukul_app/tests.html", context)

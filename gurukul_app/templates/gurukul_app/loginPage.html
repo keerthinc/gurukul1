@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="container jumbotron">
-    <form method="POST" action="{% views.ihome %}">
+    <form method="POST" action='{% url "ihome" %}'>
         {% csrf_token %}
         <p><input type="text" name="username" placeholder="Username..."></p>
         <p><input type="password" name="password" placeholder="Password..." ></p>
