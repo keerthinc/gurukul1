@@ -27,5 +27,7 @@ urlpatterns = [
     path('createCourse/',views.createCourse,name='createCourse'),
     path('courses/',views.courses,name='courses'),
     path('courseDescription/',views.courseDescription,name='courseDescription'),
+
+    path('vediochat/', views.generateToken, name = "vediochat")
     
 ]
